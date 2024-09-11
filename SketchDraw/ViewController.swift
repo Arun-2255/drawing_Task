@@ -29,8 +29,12 @@ class ViewController: UIViewController, ButtonViewInterface {
         scrollView.frame.origin.y = UIScreen.main.bounds.height - buttonView.frame.size.height
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func jpgAction(_ sender: Any) {
+        exportAndSaveAsJPEG()
+    }
+    
+    @IBAction func pngAction(_ sender: Any) {
+        exportAndSaveAsPNG()
     }
 }
 
@@ -231,5 +235,64 @@ extension ViewController {
                 break
             }
         }
+    }
+}
+
+
+
+
+extension ViewController {
+
+    // Export the SketchView as PNG
+    func exportAsPNG() -> Data? {
+        let renderer = UIGraphicsImageRenderer(size: sketchView.bounds.size)
+        let image = renderer.image { ctx in
+            sketchView.layer.render(in: ctx.cgContext)
+        }
+        return image.pngData()
+    }
+
+    // Export the SketchView as JPEG
+    func exportAsJPEG(quality: CGFloat = 0.8) -> Data? {
+        let renderer = UIGraphicsImageRenderer(size: sketchView.bounds.size)
+        let image = renderer.image { ctx in
+            sketchView.layer.render(in: ctx.cgContext)
+        }
+        return image.jpegData(compressionQuality: quality)
+    }
+
+    // Save the image to the Photos Library
+    func saveImageToPhotosLibrary(imageData: Data, format: String) {
+        if let image = UIImage(data: imageData) {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            showAlert(title: "Image Saved", message: "\(format) image saved to Photos Library.")
+            print("\(format) image saved to Photos Library.")
+        } else {
+            showAlert(title: "Failed", message: "Failed to save the image.")
+            print("Failed to save the image.")
+        }
+    }
+
+    // Export and save as PNG
+    func exportAndSaveAsPNG() {
+        if let pngData = exportAsPNG() {
+            saveImageToPhotosLibrary(imageData: pngData, format: "PNG")
+        } else {
+            print("Failed to export PNG")
+        }
+    }
+
+    // Export and save as JPEG
+    func exportAndSaveAsJPEG() {
+        if let jpegData = exportAsJPEG() {
+            saveImageToPhotosLibrary(imageData: jpegData, format: "JPEG")
+        } else {
+            print("Failed to export JPEG")
+        }
+    }
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 }

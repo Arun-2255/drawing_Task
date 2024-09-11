@@ -28,19 +28,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3b-cD-37b" userLabel="SketchView" customClass="SketchView" customModule="Sketch">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yni-qF-fge">
+                                <rect key="frame" x="319" y="70" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="ACV-OD-ueE"/>
+                                    <constraint firstAttribute="height" constant="35" id="obE-vZ-DJa"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save PNG">
+                                    <color key="titleColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pngAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QrI-Cp-uUv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-8t-P43">
+                                <rect key="frame" x="20" y="70" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Iwo-pg-LuP"/>
+                                    <constraint firstAttribute="width" constant="75" id="dfT-7M-zlK"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save Jpeg"/>
+                                <connections>
+                                    <action selector="jpgAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KYN-mN-rMv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="o3b-cD-37b" secondAttribute="trailing" id="3o8-HI-tPN"/>
-                            <constraint firstItem="o3b-cD-37b" firstAttribute="top" secondItem="jxe-s8-Ryx" secondAttribute="bottom" id="T2E-Ne-hFF"/>
+                            <constraint firstItem="yj6-8t-P43" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="6de-vI-sWd"/>
+                            <constraint firstItem="Yni-qF-fge" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="Hny-3A-7Gf"/>
                             <constraint firstItem="jxe-s8-Ryx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="15" id="WR6-hy-c9k"/>
                             <constraint firstItem="o3b-cD-37b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="XRx-BZ-eyE"/>
+                            <constraint firstAttribute="trailing" secondItem="Yni-qF-fge" secondAttribute="trailing" constant="20" id="b8E-5Q-Jts"/>
                             <constraint firstItem="jxe-s8-Ryx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="cAh-lC-tip"/>
                             <constraint firstItem="jxe-s8-Ryx" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="l9n-Og-Ir3"/>
+                            <constraint firstItem="yj6-8t-P43" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="nyH-VZ-wn1"/>
                             <constraint firstAttribute="trailing" secondItem="jxe-s8-Ryx" secondAttribute="trailing" constant="15" id="oJ9-bh-skF"/>
+                            <constraint firstItem="o3b-cD-37b" firstAttribute="top" secondItem="Yni-qF-fge" secondAttribute="bottom" constant="5" id="oqX-5c-UJT"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="o3b-cD-37b" secondAttribute="bottom" id="zq5-v0-MtV"/>
                         </constraints>
                     </view>
