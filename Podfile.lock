@@ -1,0 +1,16 @@
+PODS:
+  - Sketch (3.1)
+
+DEPENDENCIES:
+  - Sketch
+
+SPEC REPOS:
+  trunk:
+    - Sketch
+
+SPEC CHECKSUMS:
+  Sketch: db5a2d1de16fbf1fbdf57343a89c99b64b33ecf1
+
+PODFILE CHECKSUM: a653f3eb1afb33b71f631f3927e6704ad93f5485
+
+COCOAPODS: 1.14.3
