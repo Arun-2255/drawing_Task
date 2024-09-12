@@ -18,6 +18,7 @@
 		F4AA61B32C91FCC100173910 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA61B12C91FCC100173910 /* ButtonView.swift */; };
 		F4AA61B52C91FE4C00173910 /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4AA61B42C91FE4C00173910 /* ButtonView.xib */; };
 		F4AA61B72C91FFDF00173910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AA61B62C91FFDF00173910 /* Main.storyboard */; };
+		F4BFCD0B2C929D5B007FE5FB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BFCD0A2C929D5B007FE5FB /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F4AA61B12C91FCC100173910 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		F4AA61B42C91FE4C00173910 /* ButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
 		F4AA61B62C91FFDF00173910 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F4BFCD0A2C929D5B007FE5FB /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		F4230BAC2C90CC7400FEBC0C /* SketchDraw */ = {
 			isa = PBXGroup;
 			children = (
+				F4BFCD092C929D4E007FE5FB /* Common */,
 				F4230BAD2C90CC7400FEBC0C /* AppDelegate.swift */,
 				F4230BAF2C90CC7400FEBC0C /* SceneDelegate.swift */,
 				F4230BC12C90CD2300FEBC0C /* PhotoAuthorization.swift */,
@@ -105,6 +108,14 @@
 				F4230BBB2C90CC7500FEBC0C /* Info.plist */,
 			);
 			path = SketchDraw;
+			sourceTree = "<group>";
+		};
+		F4BFCD092C929D4E007FE5FB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4BFCD0A2C929D5B007FE5FB /* Common.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				F4230BC52C90CD2300FEBC0C /* PhotoAuthorization.swift in Sources */,
 				F4230BC82C90CD2300FEBC0C /* PhotoRequestManager.swift in Sources */,
 				F4230BB02C90CC7400FEBC0C /* SceneDelegate.swift in Sources */,
+				F4BFCD0B2C929D5B007FE5FB /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

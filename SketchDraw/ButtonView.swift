@@ -19,6 +19,8 @@ protocol ButtonViewInterface: class {
     func tapFigureButton()
     func tapFilterButton()
     func tapCameraButton()
+    func rotateLeft()
+    func rotateRight()
 }
 
 class ButtonView: UIView {
@@ -92,4 +94,13 @@ class ButtonView: UIView {
     @IBAction func tapCameraButton(_ sender: Any) {
        delegate?.tapCameraButton()
     }
+    
+    @IBAction func leftRotate(_ sender: Any) {
+        delegate?.rotateLeft()
+    }
+    
+    @IBAction func rightRotate(_ sender: Any) {
+        delegate?.rotateRight()
+    }
+    
 }

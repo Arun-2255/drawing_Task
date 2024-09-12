@@ -210,6 +210,12 @@ extension ViewController {
 
         present(alertController, animated: true, completion: nil)
     }
+    func rotateLeft() {
+        rotateImageLeft()
+    }
+    func rotateRight() {
+        rotateImageRight()
+    }
 
     private func setImageFromCamera() {
         PhotoRequestManager.requestPhotoFromCamera(self){ [weak self] result in
@@ -296,3 +302,21 @@ extension ViewController {
         present(alertController, animated: true, completion: nil)
     }
 }
+
+extension ViewController {
+
+    func rotateImageLeft() {
+        guard let currentImage = sketchView.image else { return }
+        let rotatedImage = currentImage.rotate(radians: -.pi/2)
+        sketchView.loadImage(image: rotatedImage)
+    }
+
+    func rotateImageRight() {
+        guard let currentImage = sketchView.image else { return }
+        let rotatedImage = currentImage.rotate(radians: .pi/2)
+        sketchView.loadImage(image: rotatedImage)
+    }
+}
+
+
+
